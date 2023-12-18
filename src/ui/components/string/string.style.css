@@ -1,0 +1,16 @@
+.string-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.string {
+  width: 4px;
+  height: 85%;
+}
+
+.string-circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
