@@ -1,78 +1,39 @@
 import './notes.style.css'
 
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
+import { LINE_NOTES } from '../../../core'
+import { Canvas } from '../canvas/canvas.component'
 import musicNotes from '../../../assets/music.json'
 
-const colors = ['#00903d', '#CE0E15', '#F4E401', '#0E6CB0', '#E98C00']
-
-const Note = ({ hasNote, color }) => {
-  return <div className='note' style={{ backgroundColor: hasNote ? color : 'transparent' }} />
-}
-
-const LineNotes = ({ top, children }) => {
-  return (
-    <>
-      {top > -50 && top < 925 && (
-        <div className='line-notes' style={{ top: top }}>
-          {children}
-        </div>
-      )}
-    </>
-  )
-}
-
 export const Notes = () => {
-  const [notes, setNotes] = useState([])
-
   useEffect(() => {
-    getNotes()
+    const handleKeyDown = event => console.log(event.key)
+
+    window.addEventListener('keydown', handleKeyDown)
+
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown)
+    }
   }, [])
 
-  useEffect(() => {
-    const interval = setInterval(() => updateNotes(), 10)
+  const draw = (context, frameCount) => {
+    const screenCenter = context.canvas.width / 2
 
-    if (notes[notes.length - 1]?.top > 1000) console.log('Fim da música')
+    musicNotes.map((line, lineIndex) => {
+      const y = lineIndex * -75 + frameCount
 
-    return () => clearInterval(interval)
-  }, [notes])
+      line.map((note, noteIndex) => {
+        if (note) {
+          const x = screenCenter + LINE_NOTES[noteIndex].column * 70
 
-  const getNotes = () => {
-    const mappedNotes = musicNotes.map((lineNotes, lineIndex) => {
-      const line = lineNotes.map((note, noteIndex) => {
-        return {
-          hasNote: note,
-          color: colors[noteIndex],
+          context.fillStyle = LINE_NOTES[noteIndex].color
+          context.beginPath()
+          context.arc(x, y, 25, 0, 2 * Math.PI)
+          context.fill()
         }
       })
-
-      return { notes: line, top: lineIndex * -75 - 200 }
     })
-
-    setNotes(mappedNotes)
   }
 
-  const updateNotes = () => {
-    const updatedNotes = notes.map(lineNotes => {
-      return {
-        ...lineNotes,
-        top: lineNotes.top + 2,
-      }
-    })
-
-    setNotes(updatedNotes)
-  }
-
-  return (
-    <div className='notes'>
-      {notes.map((line, lineIndex) => {
-        return (
-          <LineNotes key={lineIndex} top={line.top}>
-            {line.notes.map((note, noteIndex) => {
-              return <Note key={noteIndex} hasNote={note.hasNote} color={note.color} />
-            })}
-          </LineNotes>
-        )
-      })}
-    </div>
-  )
+  return <Canvas draw={draw} />
 }
