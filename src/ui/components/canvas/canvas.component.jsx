@@ -29,7 +29,7 @@ export const Canvas = ({ draw }) => {
     let animationFrameId
 
     const render = () => {
-      frameCount += 4.56
+      frameCount += 4.31
       resize(context)
       clean(context)
       draw(context, frameCount)

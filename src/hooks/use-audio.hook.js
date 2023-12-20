@@ -1,21 +1,14 @@
-import { useMemo } from 'react'
+import { useEffect, useState } from 'react'
 
-export const useAudio = () => {
-  let audio
+export const useAudio = url => {
+  const [audio] = useState(new Audio(url))
+  const [playing, setPlaying] = useState(false)
 
-  const load = path => {
-    audio = new Audio(path)
-  }
+  const togglePlay = () => setPlaying(!playing)
 
-  const play = () => {
-    audio.play()
-  }
+  useEffect(() => {
+    playing ? audio.play() : audio.pause()
+  }, [playing])
 
-  return useMemo(
-    () => ({
-      load,
-      play,
-    }),
-    []
-  )
+  return [playing, togglePlay]
 }

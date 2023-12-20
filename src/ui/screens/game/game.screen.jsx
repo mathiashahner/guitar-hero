@@ -1,32 +1,20 @@
 import './game.style.css'
 
 import { useAudio } from '../../../hooks'
-import { useEffect, useState } from 'react'
 import { Background, Notes } from '../../components'
 
 export const GameScreen = () => {
-  const [isStart, setIsStart] = useState(false)
-
-  const { load, play } = useAudio()
-
-  useEffect(() => {
-    load('/Amanhecer no Teu Olhar.mp3')
-  }, [])
-
-  const handleStart = () => {
-    setIsStart(true)
-    play()
-  }
+  const [playing, togglePlay] = useAudio('/Amanhecer no Teu Olhar.mp3')
 
   return (
     <>
       <Background />
 
-      {isStart ? (
+      {playing ? (
         <Notes />
       ) : (
         <div className='game-container'>
-          <button className='game-start' onClick={handleStart}>
+          <button className='game-start' onClick={togglePlay}>
             START
           </button>
         </div>
