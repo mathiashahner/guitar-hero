@@ -1,49 +1,35 @@
 import './notes.style.css'
-import musicNotes from '../../../assets/music.json'
 
-import { useEffect, useState } from 'react'
 import { Canvas } from '../canvas/canvas.component'
 import { NOTE_SIZE, LINE_NOTES, NOTE_RADIUS } from '../../../core'
 
-export const Notes = () => {
-  const [notes, setNotes] = useState([])
+export const Notes = ({ notes, setError }) => {
+  const handleKeyDown = (key, context, frameCount) => {
+    const height = context.canvas.height
 
-  useEffect(() => {
-    getNotes()
-    window.addEventListener('keydown', handleKeyDown)
+    const currentLine = notes.find((_, lineIndex) => {
+      const y = lineIndex * -NOTE_SIZE + frameCount
+      return y > height * 0.8 && y < height * 0.95
+    })
 
-    return () => {
-      window.removeEventListener('keydown', handleKeyDown)
+    // console.log(currentLine)
+
+    if (!currentLine) {
+      // setError(error => error + 1)
+    } else {
+      currentLine.map((note, index) => {
+        if (note.hasNote && !note.played && LINE_NOTES[index].key === key) {
+          note.played = true
+          // setError(0)
+        } else {
+          // setError(error => error + 1)
+        }
+      })
     }
-  }, [])
-
-  const getNotes = () => {
-    const mappedNotes = musicNotes.map(line => {
-      return line.map(note => {
-        return { hasNote: note, played: false }
-      })
-    })
-
-    setNotes(mappedNotes)
-  }
-
-  const updateNotes = frameCount => {
-    const updatedNotes = notes.map(line => {
-      return line.map(note => {
-        return { ...note, played: true }
-      })
-    })
-
-    setNotes(updatedNotes)
-  }
-
-  const handleKeyDown = event => {
-    // event.key
   }
 
   const draw = (context, frameCount) => {
     const screenCrenter = context.canvas.width / 2
-    // updateNotes(frameCount)
 
     notes.map((line, lineIndex) => {
       const y = lineIndex * -NOTE_SIZE + frameCount
@@ -63,5 +49,5 @@ export const Notes = () => {
     })
   }
 
-  return <Canvas draw={draw} />
+  return <Canvas draw={draw} handleKeyDown={handleKeyDown} />
 }

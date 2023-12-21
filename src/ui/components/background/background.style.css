@@ -2,7 +2,7 @@
   width: 100vw;
   height: 100vh;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   background-color: #303030;
 }
 
@@ -11,4 +11,9 @@
   height: 100%;
   display: flex;
   justify-content: space-between;
+}
+
+.background-info {
+  width: 20%;
+  height: 100%;
 }
