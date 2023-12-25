@@ -3,7 +3,15 @@ import './notes.style.css'
 import { Canvas } from '../canvas/canvas.component'
 import { NOTE_SIZE, LINE_NOTES, NOTE_RADIUS } from '../../../core'
 
-export const Notes = ({ notes, setError }) => {
+export const Notes = ({ notes, errors, setErrors }) => {
+  const incrementErrors = isIncrement => {
+    if (isIncrement) {
+      setErrors({ ...errors, sequence: errors.sequence + 1, total: errors.total + 1 })
+    } else {
+      setErrors({ ...errors, sequence: 0 })
+    }
+  }
+
   const handleKeyDown = (key, context, frameCount) => {
     const height = context.canvas.height
 
@@ -12,19 +20,18 @@ export const Notes = ({ notes, setError }) => {
       return y > height * 0.8 && y < height * 0.95
     })
 
-    // console.log(currentLine)
-
     if (!currentLine) {
-      // setError(error => error + 1)
+      incrementErrors(true)
     } else {
-      currentLine.map((note, index) => {
+      const hasNote = currentLine.reduce((result, note, index) => {
         if (note.hasNote && !note.played && LINE_NOTES[index].key === key) {
           note.played = true
-          // setError(0)
-        } else {
-          // setError(error => error + 1)
+          return true
         }
-      })
+        return result
+      }, false)
+
+      incrementErrors(!hasNote)
     }
   }
 

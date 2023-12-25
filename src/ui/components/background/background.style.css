@@ -4,6 +4,7 @@
   display: flex;
   justify-content: space-between;
   background-color: #303030;
+  overflow: hidden;
 }
 
 .background-container {
@@ -11,9 +12,35 @@
   height: 100%;
   display: flex;
   justify-content: space-between;
+  transition: all 1s ease-out;
 }
 
 .background-info {
   width: 20%;
   height: 100%;
+  padding: 20px;
+  transition: all 1s ease-out;
+}
+
+.container-hidden {
+  transform: translateY(-100%);
+}
+
+.left-hidden {
+  transform: translateX(-100%);
+}
+
+.right-hidden {
+  transform: translateX(100%);
+}
+
+.left-show .right-show .container-show {
+  transform: translate(0%);
+}
+
+.background-info > p {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 10px;
 }

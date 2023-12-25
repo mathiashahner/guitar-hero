@@ -3,18 +3,14 @@ import musicNotes from '../../../assets/music.json'
 
 import { useAudio } from '../../../hooks'
 import { useEffect, useState } from 'react'
-import { Background, Notes } from '../../components'
+import { Background, Instructions, Notes } from '../../components'
 
 export const GameScreen = () => {
-  const [error, setError] = useState(0)
   const [notes, setNotes] = useState([])
-  const [isPlaying, togglePlay] = useAudio('/Amanhecer no Teu Olhar.mp3')
+  const [errors, setErrors] = useState({ sequence: 0, total: 0 })
+  const [playing, togglePlaying] = useAudio('/Amanhecer no Teu Olhar.mp3')
 
   useEffect(() => {
-    getNotes()
-  }, [])
-
-  const getNotes = () => {
     const mappedNotes = musicNotes.map(line => {
       return line.map(note => {
         return { hasNote: note, played: false }
@@ -22,21 +18,15 @@ export const GameScreen = () => {
     })
 
     setNotes(mappedNotes)
-  }
+  }, [])
 
   return (
     <>
-      <Background error={error} />
+      <Background playing={playing} errors={errors} />
 
-      {isPlaying ? (
-        <Notes notes={notes} setError={setError} />
-      ) : (
-        <div className='game-container'>
-          <button className='game-start' onClick={togglePlay}>
-            START
-          </button>
-        </div>
-      )}
+      {playing && <Notes notes={notes} errors={errors} setErrors={setErrors} />}
+
+      <Instructions playing={playing} togglePlaying={togglePlaying} />
     </>
   )
 }
