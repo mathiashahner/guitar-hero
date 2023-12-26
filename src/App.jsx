@@ -1,12 +1,14 @@
 import './App.css'
 
-import { GameScreen } from './ui/screens'
+import { Route, Routes } from 'react-router-dom'
+import { GameScreen, NoteGenerationScreen } from './ui/screens'
 
 const App = () => {
   return (
-    <>
-      <GameScreen />
-    </>
+    <Routes>
+      <Route path={'/'} element={<GameScreen />} />
+      <Route path={'/generation'} element={<NoteGenerationScreen />} />
+    </Routes>
   )
 }
 

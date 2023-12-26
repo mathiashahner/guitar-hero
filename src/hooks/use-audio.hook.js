@@ -10,5 +10,5 @@ export const useAudio = url => {
     playing ? audio.play() : audio.pause()
   }, [playing])
 
-  return [playing, togglePlay]
+  return [playing, togglePlay, audio]
 }

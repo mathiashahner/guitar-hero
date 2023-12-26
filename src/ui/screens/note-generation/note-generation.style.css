@@ -1,0 +1,13 @@
+.note-generation {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: #303030;
+}
+
+a {
+  position: fixed;
+}
