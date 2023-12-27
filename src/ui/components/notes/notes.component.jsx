@@ -15,43 +15,37 @@ export const Notes = ({ notes, errors, setErrors }) => {
   const handleKeyDown = (key, context, frameCount) => {
     const height = context.canvas.height
 
-    const currentLine = notes.find((_, lineIndex) => {
-      const y = lineIndex * -NOTE_SIZE + frameCount
+    const currentNotes = notes.filter(note => {
+      const y = note.timestamp * -NOTE_SIZE * 3 + frameCount + 500
       return y > height * 0.8 && y < height * 0.95
     })
 
-    if (!currentLine) {
-      incrementErrors(true)
-    } else {
-      const hasNote = currentLine.reduce((result, note, index) => {
-        if (note.hasNote && !note.played && LINE_NOTES[index].key === key) {
-          note.played = true
-          return true
-        }
-        return result
-      }, false)
+    const hasNote = currentNotes.reduce((result, note) => {
+      if (!note.played && note.key === key) {
+        note.played = true
+        return true
+      }
+      return result
+    }, false)
 
-      incrementErrors(!hasNote)
-    }
+    incrementErrors(!hasNote)
   }
 
   const draw = (context, frameCount) => {
-    const screenCrenter = context.canvas.width / 2
+    const { width, height } = context.canvas
+    const screenCrenter = width / 2
 
-    notes.map((line, lineIndex) => {
-      const y = lineIndex * -NOTE_SIZE + frameCount
+    notes.map(note => {
+      const y = note.timestamp * -NOTE_SIZE * 3 + frameCount + 500
 
-      if (y > -NOTE_SIZE && y < context.canvas.height + NOTE_SIZE) {
-        line.map((note, noteIndex) => {
-          if (note.hasNote && !note.played) {
-            const x = screenCrenter + LINE_NOTES[noteIndex].column
+      if (!note.played && y > -NOTE_SIZE && y < height + NOTE_SIZE) {
+        const noteIndex = LINE_NOTES.findIndex(line => line.key === note.key)
+        const x = screenCrenter + LINE_NOTES[noteIndex].column
 
-            context.fillStyle = LINE_NOTES[noteIndex].color
-            context.beginPath()
-            context.arc(x, y, NOTE_RADIUS, 0, 2 * Math.PI)
-            context.fill()
-          }
-        })
+        context.fillStyle = LINE_NOTES[noteIndex].color
+        context.beginPath()
+        context.arc(x, y, NOTE_RADIUS, 0, 2 * Math.PI)
+        context.fill()
       }
     })
   }

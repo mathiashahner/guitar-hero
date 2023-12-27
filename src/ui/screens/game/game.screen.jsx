@@ -11,10 +11,8 @@ export const GameScreen = () => {
   const [playing, togglePlaying] = useAudio('/Amanhecer no Teu Olhar.mp3')
 
   useEffect(() => {
-    const mappedNotes = musicNotes.map(line => {
-      return line.map(note => {
-        return { hasNote: note, played: false }
-      })
+    const mappedNotes = musicNotes.map(note => {
+      return { ...note, timestamp: Number(note.timestamp), played: false }
     })
 
     setNotes(mappedNotes)

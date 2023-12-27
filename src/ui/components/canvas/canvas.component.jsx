@@ -5,7 +5,6 @@ import { useEffect, useRef } from 'react'
 export const Canvas = ({ draw, handleKeyDown }) => {
   const frameCount = useRef(0)
   const canvasRef = useRef(null)
-  const animationFrameId = useRef(null)
 
   const resize = context => {
     const canvas = context.canvas
@@ -33,21 +32,20 @@ export const Canvas = ({ draw, handleKeyDown }) => {
     }
 
     const render = () => {
-      frameCount.current += 4.2
+      frameCount.current += 0.425
       resize(context)
       clear(context)
       draw(context, frameCount.current)
-      animationFrameId.current = window.requestAnimationFrame(render)
     }
 
-    render()
+    setInterval(() => render(), 3)
     window.addEventListener('keydown', onKeyDown)
 
     return () => {
-      window.cancelAnimationFrame(animationFrameId.current)
+      window.clearInterval()
       window.removeEventListener('keydown', onKeyDown)
     }
-  }, [draw, handleKeyDown])
+  }, [])
 
   return <canvas className='canvas' ref={canvasRef} />
 }
