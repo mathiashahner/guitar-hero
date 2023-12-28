@@ -45,7 +45,7 @@ export const Canvas = ({ draw, handleKeyDown }) => {
       window.removeEventListener('keydown', onKeyDown)
       window.cancelAnimationFrame(animationFrame.current)
     }
-  }, [draw, handleKeyDown])
+  }, [draw])
 
   return <canvas className='canvas' ref={canvasRef} />
 }

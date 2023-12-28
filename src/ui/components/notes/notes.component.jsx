@@ -1,9 +1,26 @@
 import './notes.style.css'
+import musicNotes from '../../../assets/music.json'
 
+import { useEffect, useState } from 'react'
 import { Canvas } from '../canvas/canvas.component'
 import { NOTE_SIZE, LINE_NOTES, NOTE_RADIUS } from '../../../core'
 
-export const Notes = ({ notes, audio, errors, setErrors }) => {
+export const Notes = ({ audio, errors, setErrors }) => {
+  const [notes, setNotes] = useState([])
+
+  useEffect(() => {
+    const mappedNotes = musicNotes.map(note => {
+      return {
+        ...note,
+        played: false,
+        timestamp: Number(note.timestamp),
+        index: LINE_NOTES.findIndex(line => line.key === note.key),
+      }
+    })
+
+    setNotes(mappedNotes)
+  }, [])
+
   const incrementErrors = isIncrement => {
     if (isIncrement) {
       setErrors({ ...errors, sequence: errors.sequence + 1, total: errors.total + 1 })
@@ -37,19 +54,20 @@ export const Notes = ({ notes, audio, errors, setErrors }) => {
     const screenCrenter = width / 2
     const heightToPlayNote = height * 0.9
 
-    notes.map(note => {
-      const y = getNoteHeight(note, heightToPlayNote)
+    for (const note of notes) {
+      if (note.timestamp < audio.currentTime - 1) continue
+      if (note.timestamp > audio.currentTime + 3) break
 
-      if (!note.played && y > -NOTE_SIZE && y < height + NOTE_SIZE) {
-        const noteIndex = LINE_NOTES.findIndex(line => line.key === note.key)
-        const x = screenCrenter + LINE_NOTES[noteIndex].column
+      if (!note.played) {
+        const x = screenCrenter + LINE_NOTES[note.index].column
+        const y = getNoteHeight(note, heightToPlayNote)
 
-        context.fillStyle = LINE_NOTES[noteIndex].color
+        context.fillStyle = LINE_NOTES[note.index].color
         context.beginPath()
         context.arc(x, y, NOTE_RADIUS, 0, 2 * Math.PI)
         context.fill()
       }
-    })
+    }
   }
 
   const getNoteHeight = (note, heightToPlayNote) => {
