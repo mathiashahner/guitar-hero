@@ -3,7 +3,7 @@ import './notes.style.css'
 import { Canvas } from '../canvas/canvas.component'
 import { NOTE_SIZE, LINE_NOTES, NOTE_RADIUS } from '../../../core'
 
-export const Notes = ({ notes, errors, setErrors }) => {
+export const Notes = ({ notes, audio, errors, setErrors }) => {
   const incrementErrors = isIncrement => {
     if (isIncrement) {
       setErrors({ ...errors, sequence: errors.sequence + 1, total: errors.total + 1 })
@@ -12,12 +12,13 @@ export const Notes = ({ notes, errors, setErrors }) => {
     }
   }
 
-  const handleKeyDown = (key, context, frameCount) => {
+  const handleKeyDown = (key, context) => {
     const height = context.canvas.height
+    const heightToPlayNote = height * 0.9
 
     const currentNotes = notes.filter(note => {
-      const y = note.timestamp * -NOTE_SIZE * 3 + frameCount + 500
-      return y > height * 0.8 && y < height * 0.95
+      const y = getNoteHeight(note, heightToPlayNote)
+      return y > height * 0.85 && y < height * 0.95
     })
 
     const hasNote = currentNotes.reduce((result, note) => {
@@ -31,12 +32,13 @@ export const Notes = ({ notes, errors, setErrors }) => {
     incrementErrors(!hasNote)
   }
 
-  const draw = (context, frameCount) => {
+  const draw = context => {
     const { width, height } = context.canvas
     const screenCrenter = width / 2
+    const heightToPlayNote = height * 0.9
 
     notes.map(note => {
-      const y = note.timestamp * -NOTE_SIZE * 3 + frameCount + 500
+      const y = getNoteHeight(note, heightToPlayNote)
 
       if (!note.played && y > -NOTE_SIZE && y < height + NOTE_SIZE) {
         const noteIndex = LINE_NOTES.findIndex(line => line.key === note.key)
@@ -48,6 +50,10 @@ export const Notes = ({ notes, errors, setErrors }) => {
         context.fill()
       }
     })
+  }
+
+  const getNoteHeight = (note, heightToPlayNote) => {
+    return heightToPlayNote + (audio.currentTime - note.timestamp) * NOTE_SIZE * 3
   }
 
   return <Canvas draw={draw} handleKeyDown={handleKeyDown} />

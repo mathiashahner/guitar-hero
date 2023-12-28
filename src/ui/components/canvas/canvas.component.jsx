@@ -3,8 +3,8 @@ import './canvas.style.css'
 import { useEffect, useRef } from 'react'
 
 export const Canvas = ({ draw, handleKeyDown }) => {
-  const frameCount = useRef(0)
   const canvasRef = useRef(null)
+  const animationFrame = useRef(null)
 
   const resize = context => {
     const canvas = context.canvas
@@ -28,24 +28,24 @@ export const Canvas = ({ draw, handleKeyDown }) => {
     const context = canvas.getContext('2d')
 
     const onKeyDown = event => {
-      handleKeyDown(event.key, context, frameCount.current)
+      handleKeyDown(event.key, context)
     }
 
     const render = () => {
-      frameCount.current += 0.425
       resize(context)
       clear(context)
-      draw(context, frameCount.current)
+      draw(context)
+      animationFrame.current = window.requestAnimationFrame(render)
     }
 
-    setInterval(() => render(), 3)
+    render()
     window.addEventListener('keydown', onKeyDown)
 
     return () => {
-      window.clearInterval()
       window.removeEventListener('keydown', onKeyDown)
+      window.cancelAnimationFrame(animationFrame.current)
     }
-  }, [])
+  }, [draw, handleKeyDown])
 
   return <canvas className='canvas' ref={canvasRef} />
 }
