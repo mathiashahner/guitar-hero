@@ -13,7 +13,7 @@ export const Background = ({ playing, errors }) => {
 
       <div className={`background-container ${playing ? 'container-show' : 'container-hidden'}`}>
         {LINE_NOTES.map((line, index) => (
-          <String key={index} color={line.color} />
+          <String key={index} keyboardKey={line.key} color={line.color} />
         ))}
       </div>
 

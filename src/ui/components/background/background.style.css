@@ -4,12 +4,10 @@
   display: flex;
   justify-content: space-between;
   background-color: #303030;
-  overflow: hidden;
 }
 
 .background-container {
   gap: 10px;
-  height: 100%;
   display: flex;
   justify-content: space-between;
   transition: all 1s ease-out;
@@ -17,7 +15,6 @@
 
 .background-info {
   width: 20%;
-  height: 100%;
   padding: 20px;
   transition: all 1s ease-out;
 }

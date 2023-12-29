@@ -53,10 +53,12 @@ export const Notes = ({ audio, errors, setErrors }) => {
     const { width, height } = context.canvas
     const screenCrenter = width / 2
     const heightToPlayNote = height * 0.9
+    const upperLimit = audio.currentTime + height / 200
+    const lowerLimit = audio.currentTime - height / 1000
 
     for (const note of notes) {
-      if (note.timestamp < audio.currentTime - 1) continue
-      if (note.timestamp > audio.currentTime + 3) break
+      if (note.timestamp < lowerLimit) continue
+      if (note.timestamp > upperLimit) break
 
       if (!note.played) {
         const x = screenCrenter + LINE_NOTES[note.index].column
