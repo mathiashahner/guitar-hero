@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react'
 import { Canvas } from '../canvas/canvas.component'
 import { NOTE_SIZE, LINE_NOTES, NOTE_RADIUS } from '../../../core'
 
-export const Notes = ({ audio, errors, setErrors }) => {
+export const Notes = ({ audio, gameState, setGameState }) => {
   const [notes, setNotes] = useState([])
 
   useEffect(() => {
@@ -18,14 +18,19 @@ export const Notes = ({ audio, errors, setErrors }) => {
       }
     })
 
+    setGameState({ ...gameState, totalNotes: mappedNotes.length })
     setNotes(mappedNotes)
   }, [])
 
   const incrementErrors = isIncrement => {
     if (isIncrement) {
-      setErrors({ ...errors, sequence: errors.sequence + 1, total: errors.total + 1 })
+      setGameState({
+        ...gameState,
+        totalErrors: gameState.totalErrors + 1,
+        errorSequence: gameState.errorSequence + 1,
+      })
     } else {
-      setErrors({ ...errors, sequence: 0 })
+      setGameState({ ...gameState, notesPlayed: gameState.notesPlayed + 1, errorSequence: 0 })
     }
   }
 

@@ -2,9 +2,9 @@ import './instructions.style.css'
 
 import { LINE_NOTES } from '../../../core'
 
-export const Instructions = ({ playing, togglePlaying }) => {
+export const Instructions = ({ isShow, togglePlaying }) => {
   return (
-    <div className={`instructions-container ${playing ? 'instructions-hidden' : ''}`}>
+    <div className={`instructions-container ${!isShow ? 'instructions-hidden' : ''}`}>
       <div className='instructions'>
         <h1 className='instructions-title'>BIRTHDAY'S GUITAR HERO</h1>
 
