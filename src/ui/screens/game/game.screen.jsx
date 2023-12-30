@@ -11,7 +11,7 @@ export const GameScreen = () => {
 
   useEffect(() => {
     if (gameState.errorSequence >= 5) {
-      setGameState({ ...INITIAL_GAME_STATE, gameOver: true })
+      setGameState({ ...gameState, errorSequence: 0, gameOver: true })
       togglePlaying()
     }
   }, [gameState, togglePlaying])
