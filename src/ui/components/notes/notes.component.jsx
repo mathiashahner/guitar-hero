@@ -35,23 +35,27 @@ export const Notes = ({ audio, gameState, setGameState }) => {
   }
 
   const handleKeyDown = (key, context) => {
-    const height = context.canvas.height
-    const heightToPlayNote = height * 0.9
+    const hasKey = LINE_NOTES.some(line => line.key === key)
 
-    const currentNotes = notes.filter(note => {
-      const y = getNoteHeight(note, heightToPlayNote)
-      return y > height * 0.85 && y < height * 0.95
-    })
+    if (hasKey) {
+      const height = context.canvas.height
+      const heightToPlayNote = height * 0.9
 
-    const hasNote = currentNotes.reduce((result, note) => {
-      if (!note.played && note.key === key) {
-        note.played = true
-        return true
-      }
-      return result
-    }, false)
+      const currentNotes = notes.filter(note => {
+        const y = getNoteHeight(note, heightToPlayNote)
+        return y > height * 0.85 && y < height * 0.95
+      })
 
-    incrementErrors(!hasNote)
+      const hasNote = currentNotes.reduce((result, note) => {
+        if (!note.played && note.key === key) {
+          note.played = true
+          return true
+        }
+        return result
+      }, false)
+
+      incrementErrors(!hasNote)
+    }
   }
 
   const draw = context => {
