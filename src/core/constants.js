@@ -9,3 +9,9 @@ export const LINE_NOTES = [
   { color: '#0E6CB0', key: 'f', column: 1 * NOTE_SIZE },
   { color: '#E98C00', key: 'g', column: 2 * NOTE_SIZE },
 ]
+
+export const GAME_STATE = {
+  HOME: 0,
+  PLAYING: 1,
+  GAME_OVER: 2,
+}

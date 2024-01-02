@@ -1,14 +1,16 @@
 import './notes.style.css'
 import musicNotes from '../../../assets/music.json'
 
+import { useAudio } from '../../../hooks'
 import { useEffect, useState } from 'react'
 import { useGlobalGame } from '../../../contexts'
 import { Canvas } from '../canvas/canvas.component'
 import { NOTE_SIZE, LINE_NOTES, NOTE_RADIUS } from '../../../core'
 
-export const Notes = ({ audio }) => {
+export const Notes = () => {
   const [notes, setNotes] = useState([])
   const [globalGame, setGlobalGame] = useGlobalGame()
+  const [_, togglePlaying, audio] = useAudio(`/${globalGame.selectedMusic.name}.mp3`)
 
   useEffect(() => {
     const mappedNotes = musicNotes.map(note => {
@@ -22,7 +24,15 @@ export const Notes = ({ audio }) => {
 
     setGlobalGame({ ...globalGame, totalNotes: mappedNotes.length })
     setNotes(mappedNotes)
+    togglePlaying()
   }, [])
+
+  useEffect(() => {
+    if (globalGame.errorSequence >= 5) {
+      setGlobalGame({ ...globalGame, errorSequence: 0, gameOver: true })
+      togglePlaying()
+    }
+  }, [globalGame, togglePlaying])
 
   const incrementErrors = isIncrement => {
     if (isIncrement) {

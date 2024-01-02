@@ -1,3 +1,4 @@
+import { GAME_STATE } from '../core'
 import { useEffect, useState } from 'react'
 import { useGlobalGame } from '../contexts'
 
@@ -11,7 +12,7 @@ export const useAudio = url => {
   }
 
   const onEnded = () => {
-    setGlobalGame({ ...globalGame, gameOver: true })
+    setGlobalGame({ ...globalGame, state: GAME_STATE.GAME_OVER })
     setPlaying(false)
   }
 

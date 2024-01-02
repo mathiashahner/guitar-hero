@@ -1,30 +1,21 @@
 import './game.style.css'
 
-import { useEffect } from 'react'
-import { useAudio } from '../../../hooks'
+import { GAME_STATE } from '../../../core'
 import { useGlobalGame } from '../../../contexts'
 import { Background, GameOver, Instructions, Notes } from '../../components'
 
 export const GameScreen = () => {
-  const [globalGame, setGlobalGame] = useGlobalGame()
-  const [playing, togglePlaying, audio] = useAudio(`/${globalGame.selectedMusic.name}.mp3`)
-
-  useEffect(() => {
-    if (globalGame.errorSequence >= 5) {
-      setGlobalGame({ ...globalGame, errorSequence: 0, gameOver: true })
-      togglePlaying()
-    }
-  }, [globalGame, togglePlaying])
+  const [globalGame] = useGlobalGame()
 
   return (
     <>
-      <Background isShow={playing} />
+      <Background isShow={globalGame.state === GAME_STATE.PLAYING} />
 
-      {playing && <Notes audio={audio} />}
+      {globalGame.state === GAME_STATE.PLAYING && <Notes />}
 
-      <Instructions isShow={!playing && !globalGame.gameOver} togglePlaying={togglePlaying} />
+      <Instructions isShow={globalGame.state === GAME_STATE.HOME} />
 
-      <GameOver isShow={!playing && globalGame.gameOver} />
+      <GameOver isShow={globalGame.state === GAME_STATE.GAME_OVER} />
     </>
   )
 }

@@ -1,9 +1,16 @@
 import './instructions.style.css'
 
-import { LINE_NOTES } from '../../../core'
 import { Modal } from '../modal/modal.component'
+import { useGlobalGame } from '../../../contexts'
+import { GAME_STATE, LINE_NOTES } from '../../../core'
 
-export const Instructions = ({ isShow, togglePlaying }) => {
+export const Instructions = ({ isShow }) => {
+  const [globalGame, setGlobalGame] = useGlobalGame()
+
+  const handleClick = () => {
+    setGlobalGame({ ...globalGame, state: GAME_STATE.PLAYING })
+  }
+
   return (
     <Modal isShow={isShow}>
       <h1 className='instructions-title'>BIRTHDAY'S GUITAR HERO</h1>
@@ -30,7 +37,7 @@ export const Instructions = ({ isShow, togglePlaying }) => {
         <p>Feliz aniversário, te amo muito!</p>
       </div>
 
-      <button className='instructions-start' onClick={togglePlaying}>
+      <button className='instructions-start' onClick={handleClick}>
         START
       </button>
     </Modal>
