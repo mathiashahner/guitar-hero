@@ -1,30 +1,30 @@
 import './game.style.css'
 
+import { useEffect } from 'react'
 import { useAudio } from '../../../hooks'
-import { useEffect, useState } from 'react'
-import { INITIAL_GAME_STATE } from '../../../core'
+import { useGlobalGame } from '../../../contexts'
 import { Background, GameOver, Instructions, Notes } from '../../components'
 
 export const GameScreen = () => {
-  const [gameState, setGameState] = useState(INITIAL_GAME_STATE)
-  const [playing, togglePlaying, audio] = useAudio('/Amanhecer no Teu Olhar.mp3')
+  const [globalGame, setGlobalGame] = useGlobalGame()
+  const [playing, togglePlaying, audio] = useAudio(`/${globalGame.selectedMusic.name}.mp3`)
 
   useEffect(() => {
-    if (gameState.errorSequence >= 5) {
-      setGameState({ ...gameState, errorSequence: 0, gameOver: true })
+    if (globalGame.errorSequence >= 5) {
+      setGlobalGame({ ...globalGame, errorSequence: 0, gameOver: true })
       togglePlaying()
     }
-  }, [gameState, togglePlaying])
+  }, [globalGame, togglePlaying])
 
   return (
     <>
-      <Background isShow={playing} gameState={gameState} />
+      <Background isShow={playing} />
 
-      {playing && <Notes audio={audio} gameState={gameState} setGameState={setGameState} />}
+      {playing && <Notes audio={audio} />}
 
-      <Instructions isShow={!playing && !gameState.gameOver} togglePlaying={togglePlaying} />
+      <Instructions isShow={!playing && !globalGame.gameOver} togglePlaying={togglePlaying} />
 
-      <GameOver isShow={!playing && gameState.gameOver} gameState={gameState} />
+      <GameOver isShow={!playing && globalGame.gameOver} />
     </>
   )
 }

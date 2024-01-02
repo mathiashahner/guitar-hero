@@ -9,11 +9,3 @@ export const LINE_NOTES = [
   { color: '#0E6CB0', key: 'f', column: 1 * NOTE_SIZE },
   { color: '#E98C00', key: 'g', column: 2 * NOTE_SIZE },
 ]
-
-export const INITIAL_GAME_STATE = {
-  gameOver: false,
-  totalNotes: 0,
-  notesPlayed: 0,
-  errorSequence: 0,
-  totalErrors: 0,
-}

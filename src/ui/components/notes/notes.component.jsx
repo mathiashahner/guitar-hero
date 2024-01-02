@@ -2,11 +2,13 @@ import './notes.style.css'
 import musicNotes from '../../../assets/music.json'
 
 import { useEffect, useState } from 'react'
+import { useGlobalGame } from '../../../contexts'
 import { Canvas } from '../canvas/canvas.component'
 import { NOTE_SIZE, LINE_NOTES, NOTE_RADIUS } from '../../../core'
 
-export const Notes = ({ audio, gameState, setGameState }) => {
+export const Notes = ({ audio }) => {
   const [notes, setNotes] = useState([])
+  const [globalGame, setGlobalGame] = useGlobalGame()
 
   useEffect(() => {
     const mappedNotes = musicNotes.map(note => {
@@ -18,19 +20,19 @@ export const Notes = ({ audio, gameState, setGameState }) => {
       }
     })
 
-    setGameState({ ...gameState, totalNotes: mappedNotes.length })
+    setGlobalGame({ ...globalGame, totalNotes: mappedNotes.length })
     setNotes(mappedNotes)
   }, [])
 
   const incrementErrors = isIncrement => {
     if (isIncrement) {
-      setGameState({
-        ...gameState,
-        totalErrors: gameState.totalErrors + 1,
-        errorSequence: gameState.errorSequence + 1,
+      setGlobalGame({
+        ...globalGame,
+        totalErrors: globalGame.totalErrors + 1,
+        errorSequence: globalGame.errorSequence + 1,
       })
     } else {
-      setGameState({ ...gameState, notesPlayed: gameState.notesPlayed + 1, errorSequence: 0 })
+      setGlobalGame({ ...globalGame, notesPlayed: globalGame.notesPlayed + 1, errorSequence: 0 })
     }
   }
 
