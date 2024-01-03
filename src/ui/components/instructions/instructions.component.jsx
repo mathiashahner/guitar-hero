@@ -13,9 +13,9 @@ export const Instructions = ({ isShow }) => {
 
   return (
     <Modal isShow={isShow}>
-      <h1 className='instructions-title'>BIRTHDAY'S GUITAR HERO</h1>
+      <h1 className='modal-title'>BIRTHDAY'S GUITAR HERO</h1>
 
-      <div className='instructions-body'>
+      <div className='modal-body'>
         <p>
           &emsp;&emsp;Mor cabrito, pra comemorar seu aniversário e te inspirar, resolvi fazer este jorginho
           pra você.

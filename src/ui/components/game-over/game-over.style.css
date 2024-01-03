@@ -1,0 +1,15 @@
+th,
+td {
+  padding: 20px;
+  font-weight: 700;
+  text-align: center;
+  border-radius: 10px;
+  border: 2px solid #202020;
+}
+
+th,
+td:nth-of-type(1) {
+  font-size: 20px;
+  font-weight: 500;
+  background-color: #303030;
+}

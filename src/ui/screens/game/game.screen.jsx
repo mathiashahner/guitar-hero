@@ -15,7 +15,7 @@ export const GameScreen = () => {
 
       <Instructions isShow={globalGame.state === GAME_STATE.HOME} />
 
-      <GameOver isShow={globalGame.state === GAME_STATE.GAME_OVER} />
+      {globalGame.state === GAME_STATE.GAME_OVER && <GameOver />}
     </>
   )
 }
