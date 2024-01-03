@@ -10,7 +10,7 @@ import { NOTE_SIZE, LINE_NOTES, NOTE_RADIUS } from '../../../core'
 export const Notes = () => {
   const [notes, setNotes] = useState([])
   const [globalGame, setGlobalGame] = useGlobalGame()
-  const [_, togglePlaying, audio] = useAudio(`/${globalGame.selectedMusic.name}.mp3`)
+  const [audio, togglePlay] = useAudio(`/${globalGame.selectedMusic.name}.mp3`)
 
   useEffect(() => {
     const mappedNotes = musicNotes.map(note => {
@@ -24,15 +24,8 @@ export const Notes = () => {
 
     setGlobalGame({ ...globalGame, totalNotes: mappedNotes.length })
     setNotes(mappedNotes)
-    togglePlaying()
+    togglePlay()
   }, [])
-
-  useEffect(() => {
-    if (globalGame.errorSequence >= 5) {
-      setGlobalGame({ ...globalGame, errorSequence: 0, gameOver: true })
-      togglePlaying()
-    }
-  }, [globalGame, togglePlaying])
 
   const incrementErrors = isIncrement => {
     if (isIncrement) {

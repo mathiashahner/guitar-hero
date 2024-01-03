@@ -1,9 +1,9 @@
 import { GAME_STATE } from '../core'
-import { useEffect, useState } from 'react'
 import { useGlobalGame } from '../contexts'
+import { useEffect, useState } from 'react'
 
-export const useAudio = url => {
-  const [audio] = useState(new Audio(url))
+export const useAudio = path => {
+  const [audio] = useState(new Audio(path))
   const [playing, setPlaying] = useState(false)
   const [globalGame, setGlobalGame] = useGlobalGame()
 
@@ -12,13 +12,24 @@ export const useAudio = url => {
   }
 
   const onEnded = () => {
-    setGlobalGame({ ...globalGame, state: GAME_STATE.GAME_OVER })
     setPlaying(false)
+
+    setTimeout(() => {
+      setGlobalGame(game => {
+        return { ...game, state: GAME_STATE.GAME_OVER }
+      })
+    }, 100)
   }
 
   useEffect(() => {
     playing ? audio.play() : audio.pause()
   }, [playing])
+
+  useEffect(() => {
+    if (globalGame.errorSequence >= 5) {
+      onEnded()
+    }
+  }, [globalGame.errorSequence])
 
   useEffect(() => {
     audio.addEventListener('ended', onEnded)
@@ -28,5 +39,5 @@ export const useAudio = url => {
     }
   }, [])
 
-  return [playing, togglePlay, audio]
+  return [audio, togglePlay, playing]
 }

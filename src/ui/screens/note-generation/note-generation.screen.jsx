@@ -8,7 +8,7 @@ let notes = []
 
 export const NoteGenerationScreen = () => {
   const downloadRef = useRef(null)
-  const [playing, togglePlay, audio] = useAudio('/Amanhecer no Teu Olhar.mp3')
+  const [audio, togglePlay, played] = useAudio('/Amanhecer no teu olhar.mp3')
 
   useEffect(() => {
     window.addEventListener('keydown', handleKeyDown)
@@ -29,10 +29,6 @@ export const NoteGenerationScreen = () => {
     }
   }
 
-  const handleStart = () => {
-    togglePlay()
-  }
-
   const handleStop = () => {
     togglePlay()
 
@@ -44,8 +40,8 @@ export const NoteGenerationScreen = () => {
 
   return (
     <div className='note-generation'>
-      <button className='instructions-start' onClick={playing ? handleStop : handleStart}>
-        {playing ? 'Stop recording' : 'Start recording'}
+      <button className='instructions-start' onClick={played ? handleStop : togglePlay}>
+        {played ? 'Stop recording' : 'Start recording'}
       </button>
 
       <a ref={downloadRef} />
