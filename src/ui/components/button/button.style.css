@@ -1,10 +1,10 @@
 .button {
-  padding: 15px 40px 15px;
-  border-radius: 20px;
+  padding: 12px;
+  border-radius: 60px;
   cursor: pointer;
-  font-size: 20px;
-  font-weight: 700;
-  color: #f4e401;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #303030;
   border: 3px solid #f4e401;
   transition: all 0.3s;
@@ -13,4 +13,9 @@
 .button:hover {
   scale: 1.05;
   box-shadow: 0px 0px 20px 0px rgba(244, 228, 1, 0.2);
+}
+
+.button-img {
+  width: 30px;
+  height: 30px;
 }

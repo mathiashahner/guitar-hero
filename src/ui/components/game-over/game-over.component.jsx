@@ -1,9 +1,9 @@
 import './game-over.style.css'
 
+import { Button, Modal } from '..'
 import { getScore } from '../../../core'
 import { useEffect, useState } from 'react'
-import { Modal } from '../modal/modal.component'
-import { Button } from '../button/button.component'
+import { arrowLeftIcon } from '../../../assets'
 import { DEFAULT_GAME_STATE, useGlobalGame, useGlobalUser } from '../../../contexts'
 
 export const GameOver = () => {
@@ -73,7 +73,7 @@ export const GameOver = () => {
         </table>
       </div>
 
-      <Button text={'INÍCIO'} handleClick={handleClick} />
+      <Button src={arrowLeftIcon} alt={'Home'} handleClick={handleClick} />
     </Modal>
   )
 }
