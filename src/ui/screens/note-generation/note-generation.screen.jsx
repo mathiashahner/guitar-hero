@@ -2,6 +2,7 @@ import './note-generation.style.css'
 
 import { useEffect, useRef } from 'react'
 import { useAudio } from '../../../hooks'
+import { Button } from '../../components'
 import { LINE_NOTES } from '../../../core'
 
 let notes = []
@@ -40,9 +41,10 @@ export const NoteGenerationScreen = () => {
 
   return (
     <div className='note-generation'>
-      <button className='instructions-start' onClick={played ? handleStop : togglePlay}>
-        {played ? 'Stop recording' : 'Start recording'}
-      </button>
+      <Button
+        text={played ? 'Stop recording' : 'Start recording'}
+        handleClick={played ? handleStop : togglePlay}
+      />
 
       <a ref={downloadRef} />
     </div>

@@ -13,3 +13,13 @@ td:nth-of-type(1) {
   font-weight: 500;
   background-color: #303030;
 }
+
+th:nth-child(1) {
+  font-weight: 700;
+}
+
+.game-over-record {
+  font-size: 24px;
+  font-weight: 700;
+  text-shadow: 0px 0px 20px rgba(244, 228, 1, 0.2);
+}

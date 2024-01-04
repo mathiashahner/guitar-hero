@@ -9,12 +9,9 @@ export const GameScreen = () => {
 
   return (
     <>
-      <Background isShow={globalGame.state === GAME_STATE.PLAYING} />
-
+      <Background />
+      <Instructions />
       {globalGame.state === GAME_STATE.PLAYING && <Notes />}
-
-      <Instructions isShow={globalGame.state === GAME_STATE.HOME} />
-
       {globalGame.state === GAME_STATE.GAME_OVER && <GameOver />}
     </>
   )

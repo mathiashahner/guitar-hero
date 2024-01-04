@@ -3,10 +3,12 @@ import './background.style.css'
 import { useGlobalGame } from '../../../contexts'
 import { String } from '../string/string.component'
 import { okIcon, errorIcon } from '../../../assets'
-import { LINE_NOTES, getScore } from '../../../core'
+import { GAME_STATE, LINE_NOTES, getScore } from '../../../core'
 
-export const Background = ({ isShow }) => {
+export const Background = () => {
   const [globalGame] = useGlobalGame()
+
+  const isShow = globalGame.state === GAME_STATE.PLAYING
 
   return (
     <div className='background'>
