@@ -3,8 +3,8 @@ import './instructions.style.css'
 import { useState } from 'react'
 import { Button, Modal } from '..'
 import { GAME_STATE, LINE_NOTES } from '../../../core'
-import { arrowRightIcon, playIcon } from '../../../assets'
 import { useGlobalGame, useGlobalUser } from '../../../contexts'
+import { arrowLeftIcon, arrowRightIcon, playIcon, trophyIcon } from '../../../assets'
 
 const FirstInstruction = ({ handleClick }) => {
   return (
@@ -50,6 +50,15 @@ const SecondInstruction = ({ handleClick }) => {
     })
   }
 
+  const handleStart = () => {
+    handleClick()
+    setGlobalGame({ ...globalGame, state: GAME_STATE.PLAYING })
+  }
+
+  const handleAwards = () => {
+    setGlobalGame({ ...globalGame, state: GAME_STATE.AWARDS })
+  }
+
   return (
     <>
       <div className='modal-body'>
@@ -62,29 +71,30 @@ const SecondInstruction = ({ handleClick }) => {
               onClick={() => handleSelect(index)}
               className={`instructions-item ${selectedMusic === index ? 'instructions-item-select' : ''}`}
             >
-              <p>{music.name}</p>
+              <p className='instructions-music-name'>
+                {music.name}, <span>{music.artist}</span>
+              </p>
               <p>{music.score}%</p>
             </li>
           ))}
         </ul>
       </div>
 
-      <Button src={playIcon} alt={'Play'} handleClick={handleClick} />
+      <div className='modal-buttons'>
+        <Button src={arrowLeftIcon} alt={'Back'} handleClick={handleClick} />
+        {selectedMusic !== -1 && <Button src={playIcon} alt={'Play'} handleClick={handleStart} />}
+        <Button src={trophyIcon} alt={'Awards'} handleClick={handleAwards} />
+      </div>
     </>
   )
 }
 
 export const Instructions = () => {
-  const [globalGame, setGlobalGame] = useGlobalGame()
+  const [globalGame] = useGlobalGame()
   const [nextInstruction, setNextInstruction] = useState(false)
 
-  const handleNext = () => {
-    setNextInstruction(true)
-  }
-
-  const handleStart = () => {
-    setNextInstruction(false)
-    setGlobalGame({ ...globalGame, state: GAME_STATE.PLAYING })
+  const toggleInstruction = () => {
+    setNextInstruction(!nextInstruction)
   }
 
   return (
@@ -92,9 +102,9 @@ export const Instructions = () => {
       <h1 className='modal-title'>BIRTHDAY'S GUITAR HERO</h1>
 
       {!nextInstruction ? (
-        <FirstInstruction handleClick={handleNext} />
+        <FirstInstruction handleClick={toggleInstruction} />
       ) : (
-        <SecondInstruction handleClick={handleStart} />
+        <SecondInstruction handleClick={toggleInstruction} />
       )}
     </Modal>
   )

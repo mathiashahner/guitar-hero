@@ -17,11 +17,18 @@ const useGlobalUser = () => {
   const [globalUser, _setGlobalUser] = _useGlobalUser()
 
   const setState = value => {
+    value.sort(comparisonFunction)
     localStorage.setItem(USER_LOCAL_STORAGE_KEY, JSON.stringify(value))
     _setGlobalUser(value)
   }
 
   return [globalUser, setState]
+}
+
+const comparisonFunction = (a, b) => {
+  if (a.name > b.name) return 1
+  if (a.name < b.name) return -1
+  return 0
 }
 
 export { useGlobalUser, GlobalUserProvider }

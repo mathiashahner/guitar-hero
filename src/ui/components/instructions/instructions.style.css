@@ -31,6 +31,13 @@
 
 .instructions-item:hover,
 .instructions-item-select {
-  scale: 1.02;
   background-color: #404040;
+}
+
+.instructions-item-select {
+  scale: 1.02;
+}
+
+.instructions-music-name span {
+  font-size: 14px;
 }

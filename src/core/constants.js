@@ -14,4 +14,5 @@ export const GAME_STATE = {
   HOME: 0,
   PLAYING: 1,
   GAME_OVER: 2,
+  AWARDS: 3,
 }
