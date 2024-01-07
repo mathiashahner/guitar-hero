@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { Button, Modal } from '..'
 import { GAME_STATE, LINE_NOTES } from '../../../core'
 import { useGlobalGame, useGlobalUser } from '../../../contexts'
-import { arrowLeftIcon, arrowRightIcon, playIcon, trophyIcon } from '../../../assets'
+import { arrowLeftIcon, arrowRightIcon, trophyIcon } from '../../../assets'
 
 const FirstInstruction = ({ handleClick }) => {
   return (
@@ -39,23 +39,19 @@ const FirstInstruction = ({ handleClick }) => {
 const SecondInstruction = ({ handleClick }) => {
   const [globalUser] = useGlobalUser()
   const [globalGame, setGlobalGame] = useGlobalGame()
-  const [selectedMusic, setSelectedMusic] = useState(-1)
 
-  const handleSelect = index => {
-    setSelectedMusic(index)
+  const handleStart = index => {
+    handleClick()
 
     setGlobalGame({
       ...globalGame,
+      state: GAME_STATE.PLAYING,
       selectedMusic: { name: globalUser[index].name, artist: globalUser[index].artist },
     })
   }
 
-  const handleStart = () => {
-    handleClick()
-    setGlobalGame({ ...globalGame, state: GAME_STATE.PLAYING })
-  }
-
   const handleAwards = () => {
+    handleClick()
     setGlobalGame({ ...globalGame, state: GAME_STATE.AWARDS })
   }
 
@@ -66,11 +62,7 @@ const SecondInstruction = ({ handleClick }) => {
 
         <ul className='instructions-list'>
           {globalUser.map((music, index) => (
-            <li
-              key={index}
-              onClick={() => handleSelect(index)}
-              className={`instructions-item ${selectedMusic === index ? 'instructions-item-select' : ''}`}
-            >
+            <li key={index} onClick={() => handleStart(index)} className='instructions-item'>
               <p className='instructions-music-name'>
                 {music.name}, <span>{music.artist}</span>
               </p>
@@ -82,7 +74,6 @@ const SecondInstruction = ({ handleClick }) => {
 
       <div className='modal-buttons'>
         <Button src={arrowLeftIcon} alt={'Back'} handleClick={handleClick} />
-        {selectedMusic !== -1 && <Button src={playIcon} alt={'Play'} handleClick={handleStart} />}
         <Button src={trophyIcon} alt={'Awards'} handleClick={handleAwards} />
       </div>
     </>

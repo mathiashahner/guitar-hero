@@ -32,7 +32,7 @@ export const GameOver = () => {
     }
   }
 
-  const handleClick = () => {
+  const handleHome = () => {
     setGlobalGame(DEFAULT_GAME_STATE)
   }
 
@@ -73,7 +73,7 @@ export const GameOver = () => {
         </table>
       </div>
 
-      <Button src={arrowLeftIcon} alt={'Home'} handleClick={handleClick} />
+      <Button src={arrowLeftIcon} alt={'Home'} handleClick={handleHome} />
     </Modal>
   )
 }
