@@ -1,0 +1,33 @@
+.awards-list {
+  width: 100%;
+  list-style: none;
+  overflow: hidden;
+}
+
+.awards-item {
+  padding: 20px;
+  display: flex;
+  cursor: pointer;
+  position: relative;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  background-color: #303030;
+  justify-content: space-between;
+}
+
+.awards-item-hint {
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 17px;
+  border-radius: 10px;
+  background-color: #202020;
+  transform: translateX(-100%);
+  position: absolute;
+  transition: all 1s;
+  border: 3px solid #f4e401;
+}
+
+.awards-music-name span {
+  font-size: 14px;
+}

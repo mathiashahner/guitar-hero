@@ -42,12 +42,7 @@ const SecondInstruction = ({ handleClick }) => {
 
   const handleStart = index => {
     handleClick()
-
-    setGlobalGame({
-      ...globalGame,
-      state: GAME_STATE.PLAYING,
-      selectedMusic: { name: globalUser[index].name, artist: globalUser[index].artist },
-    })
+    setGlobalGame({ ...globalGame, state: GAME_STATE.PLAYING, selectedMusic: globalUser[index] })
   }
 
   const handleAwards = () => {

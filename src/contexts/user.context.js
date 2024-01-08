@@ -3,9 +3,30 @@ import createGlobalState from 'react-create-global-state'
 const USER_LOCAL_STORAGE_KEY = 'guitar-hero-local-storage-key'
 
 const DEFAULT_LOCAL_STORAGE = [
-  { name: 'Amanhecer no teu olhar', artist: 'Restart', score: 0, notesPlayed: 0, totalErrors: 0 },
-  { name: 'Esse amor em mim', artist: 'Restart', score: 0, notesPlayed: 0, totalErrors: 0 },
-  { name: 'Lembranças', artist: 'Restart', score: 0, notesPlayed: 0, totalErrors: 0 },
+  {
+    name: 'Amanhecer no teu olhar',
+    artist: 'Restart',
+    score: 0,
+    notesPlayed: 0,
+    totalErrors: 0,
+    hint: 'O que é o que é',
+  },
+  {
+    name: 'Esse amor em mim',
+    artist: 'Restart',
+    score: 0,
+    notesPlayed: 0,
+    totalErrors: 0,
+    hint: 'sou alto mas não sou gente',
+  },
+  {
+    name: 'Lembranças',
+    artist: 'Restart',
+    score: 0,
+    notesPlayed: 0,
+    totalErrors: 0,
+    hint: 'e também não guardo pasta de dente',
+  },
 ]
 
 const localStorageValue = localStorage.getItem(USER_LOCAL_STORAGE_KEY)

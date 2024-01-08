@@ -25,6 +25,7 @@ export const GameOver = () => {
   const getMusic = () => {
     return {
       score: getScore(globalGame),
+      hint: globalGame.selectedMusic.hint,
       name: globalGame.selectedMusic.name,
       artist: globalGame.selectedMusic.artist,
       notesPlayed: globalGame.notesPlayed,
