@@ -1,5 +1,4 @@
 import './notes.style.css'
-import musicNotes from '../../../assets/music.json'
 
 import { useAudio } from '../../../hooks'
 import { useEffect, useState } from 'react'
@@ -11,21 +10,30 @@ export const Notes = () => {
   const [notes, setNotes] = useState([])
   const [globalGame, setGlobalGame] = useGlobalGame()
   const [audio, togglePlay] = useAudio(`/${globalGame.selectedMusic.name}.mp3`)
+  const [state, setState] = useState(null)
 
   useEffect(() => {
-    const mappedNotes = musicNotes.map(note => {
-      return {
-        ...note,
-        played: false,
-        timestamp: Number(note.timestamp),
-        index: LINE_NOTES.findIndex(line => line.key === note.key),
-      }
-    })
-
-    setGlobalGame({ ...globalGame, totalNotes: mappedNotes.length })
-    setNotes(mappedNotes)
-    togglePlay()
+    import(`../../../assets/${globalGame.selectedMusic.name}.json`)
+      .then(data => setState(data))
+      .catch(error => console.log(error))
   }, [])
+
+  useEffect(() => {
+    if (state) {
+      const mappedNotes = state.default.map(note => {
+        return {
+          ...note,
+          played: false,
+          timestamp: Number(note.timestamp),
+          index: LINE_NOTES.findIndex(line => line.key === note.key),
+        }
+      })
+
+      setGlobalGame({ ...globalGame, totalNotes: mappedNotes.length })
+      setNotes(mappedNotes)
+      togglePlay()
+    }
+  }, [state])
 
   const incrementErrors = isIncrement => {
     if (isIncrement) {
