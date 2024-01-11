@@ -10,17 +10,10 @@ export const Notes = () => {
   const [notes, setNotes] = useState([])
   const [globalGame, setGlobalGame] = useGlobalGame()
   const [audio, togglePlay] = useAudio(`/${globalGame.selectedMusic.name}.mp3`)
-  const [state, setState] = useState(null)
 
   useEffect(() => {
-    import(`../../../assets/${globalGame.selectedMusic.name}.json`)
-      .then(data => setState(data))
-      .catch(error => console.log(error))
-  }, [])
-
-  useEffect(() => {
-    if (state) {
-      const mappedNotes = state.default.map(note => {
+    import(`../../../assets/${globalGame.selectedMusic.name}.json`).then(jsonData => {
+      const mappedNotes = jsonData.default.map(note => {
         return {
           ...note,
           played: false,
@@ -32,8 +25,8 @@ export const Notes = () => {
       setGlobalGame({ ...globalGame, totalNotes: mappedNotes.length })
       setNotes(mappedNotes)
       togglePlay()
-    }
-  }, [state])
+    })
+  }, [])
 
   const incrementErrors = isIncrement => {
     if (isIncrement) {
