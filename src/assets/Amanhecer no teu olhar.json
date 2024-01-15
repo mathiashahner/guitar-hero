@@ -1,7 +1,7 @@
 [
   {
     "key": "d",
-    "timestamp": "2.69"
+    "timestamp": "2.75"
   },
   {
     "key": "f",
@@ -9,19 +9,19 @@
   },
   {
     "key": "g",
-    "timestamp": "3.46"
+    "timestamp": "3.43"
   },
   {
     "key": "d",
-    "timestamp": "4.31"
+    "timestamp": "4.29"
   },
   {
     "key": "d",
-    "timestamp": "4.85"
+    "timestamp": "4.86"
   },
   {
     "key": "f",
-    "timestamp": "5.23"
+    "timestamp": "5.24"
   },
   {
     "key": "g",
@@ -29,23 +29,23 @@
   },
   {
     "key": "d",
-    "timestamp": "6.52"
+    "timestamp": "6.48"
   },
   {
     "key": "s",
-    "timestamp": "7.03"
+    "timestamp": "7.01"
   },
   {
     "key": "d",
-    "timestamp": "7.44"
+    "timestamp": "7.42"
   },
   {
     "key": "f",
-    "timestamp": "7.84"
+    "timestamp": "7.80"
   },
   {
     "key": "s",
-    "timestamp": "8.68"
+    "timestamp": "8.66"
   },
   {
     "key": "s",
@@ -53,19 +53,19 @@
   },
   {
     "key": "d",
-    "timestamp": "9.65"
+    "timestamp": "9.60"
   },
   {
     "key": "f",
-    "timestamp": "10.00"
+    "timestamp": "10.01"
   },
   {
     "key": "s",
-    "timestamp": "10.88"
+    "timestamp": "10.84"
   },
   {
     "key": "a",
-    "timestamp": "11.35"
+    "timestamp": "11.36"
   },
   {
     "key": "s",
@@ -73,211 +73,243 @@
   },
   {
     "key": "d",
-    "timestamp": "12.12"
+    "timestamp": "12.14"
   },
   {
     "key": "a",
-    "timestamp": "12.95"
+    "timestamp": "12.98"
   },
   {
     "key": "a",
-    "timestamp": "13.49"
+    "timestamp": "13.54"
   },
   {
     "key": "s",
-    "timestamp": "13.92"
+    "timestamp": "13.94"
   },
   {
     "key": "d",
-    "timestamp": "14.37"
+    "timestamp": "14.35"
   },
   {
     "key": "a",
-    "timestamp": "15.13"
-  },
-  {
-    "key": "f",
-    "timestamp": "15.72"
+    "timestamp": "15.18"
   },
   {
     "key": "s",
-    "timestamp": "15.72"
+    "timestamp": "15.75"
+  },
+  {
+    "key": "f",
+    "timestamp": "15.75"
+  },
+  {
+    "key": "g",
+    "timestamp": "19.52"
   },
   {
     "key": "a",
-    "timestamp": "19.63"
+    "timestamp": "19.55"
   },
   {
     "key": "d",
-    "timestamp": "20.11"
+    "timestamp": "19.55"
   },
   {
-    "key": "f",
-    "timestamp": "20.38"
+    "key": "a",
+    "timestamp": "20.04"
   },
   {
-    "key": "g",
-    "timestamp": "20.65"
+    "key": "s",
+    "timestamp": "20.33"
   },
   {
     "key": "d",
-    "timestamp": "21.10"
+    "timestamp": "20.63"
   },
   {
-    "key": "f",
-    "timestamp": "21.37"
+    "key": "s",
+    "timestamp": "20.92"
   },
   {
-    "key": "g",
+    "key": "d",
+    "timestamp": "21.08"
+  },
+  {
+    "key": "s",
+    "timestamp": "21.35"
+  },
+  {
+    "key": "d",
     "timestamp": "21.48"
   },
   {
-    "key": "f",
-    "timestamp": "21.79"
+    "key": "s",
+    "timestamp": "21.78"
+  },
+  {
+    "key": "a",
+    "timestamp": "22.27"
+  },
+  {
+    "key": "s",
+    "timestamp": "22.54"
   },
   {
     "key": "d",
-    "timestamp": "22.36"
+    "timestamp": "22.85"
   },
   {
-    "key": "f",
-    "timestamp": "22.60"
-  },
-  {
-    "key": "g",
-    "timestamp": "22.87"
+    "key": "s",
+    "timestamp": "23.10"
   },
   {
     "key": "d",
-    "timestamp": "23.28"
+    "timestamp": "23.24"
   },
   {
-    "key": "f",
-    "timestamp": "23.50"
+    "key": "s",
+    "timestamp": "23.51"
   },
   {
-    "key": "g",
-    "timestamp": "23.62"
+    "key": "d",
+    "timestamp": "23.67"
   },
   {
-    "key": "f",
+    "key": "s",
     "timestamp": "23.93"
   },
   {
     "key": "s",
-    "timestamp": "24.50"
+    "timestamp": "24.47"
   },
   {
     "key": "d",
-    "timestamp": "24.74"
+    "timestamp": "24.75"
   },
   {
     "key": "f",
-    "timestamp": "25.03"
+    "timestamp": "25.02"
   },
   {
-    "key": "s",
+    "key": "d",
+    "timestamp": "25.29"
+  },
+  {
+    "key": "f",
     "timestamp": "25.42"
   },
   {
     "key": "d",
-    "timestamp": "25.71"
+    "timestamp": "25.69"
   },
   {
     "key": "f",
-    "timestamp": "25.85"
+    "timestamp": "25.80"
   },
   {
     "key": "d",
-    "timestamp": "26.11"
+    "timestamp": "26.09"
   },
   {
     "key": "s",
-    "timestamp": "26.68"
+    "timestamp": "26.63"
   },
   {
     "key": "d",
-    "timestamp": "26.97"
+    "timestamp": "26.88"
   },
   {
     "key": "f",
-    "timestamp": "27.24"
-  },
-  {
-    "key": "s",
-    "timestamp": "27.64"
+    "timestamp": "27.17"
   },
   {
     "key": "d",
-    "timestamp": "27.91"
+    "timestamp": "27.44"
   },
   {
     "key": "f",
-    "timestamp": "28.03"
+    "timestamp": "27.60"
   },
   {
     "key": "d",
-    "timestamp": "28.34"
+    "timestamp": "27.90"
   },
   {
-    "key": "a",
-    "timestamp": "28.90"
-  },
-  {
-    "key": "s",
-    "timestamp": "29.15"
+    "key": "f",
+    "timestamp": "28.01"
   },
   {
     "key": "d",
-    "timestamp": "29.42"
-  },
-  {
-    "key": "a",
-    "timestamp": "29.83"
-  },
-  {
-    "key": "s",
-    "timestamp": "30.12"
+    "timestamp": "28.28"
   },
   {
     "key": "d",
-    "timestamp": "30.23"
+    "timestamp": "28.86"
   },
   {
-    "key": "s",
-    "timestamp": "30.48"
+    "key": "f",
+    "timestamp": "29.13"
   },
   {
-    "key": "a",
-    "timestamp": "31.02"
+    "key": "g",
+    "timestamp": "29.40"
   },
   {
-    "key": "s",
+    "key": "f",
+    "timestamp": "29.67"
+  },
+  {
+    "key": "g",
+    "timestamp": "29.81"
+  },
+  {
+    "key": "f",
+    "timestamp": "30.10"
+  },
+  {
+    "key": "g",
+    "timestamp": "30.21"
+  },
+  {
+    "key": "f",
+    "timestamp": "30.51"
+  },
+  {
+    "key": "d",
+    "timestamp": "31.05"
+  },
+  {
+    "key": "f",
     "timestamp": "31.29"
   },
   {
-    "key": "d",
-    "timestamp": "31.58"
+    "key": "g",
+    "timestamp": "31.59"
   },
   {
-    "key": "a",
-    "timestamp": "31.96"
+    "key": "f",
+    "timestamp": "31.83"
   },
   {
-    "key": "s",
+    "key": "g",
+    "timestamp": "31.99"
+  },
+  {
+    "key": "f",
     "timestamp": "32.26"
   },
   {
-    "key": "d",
-    "timestamp": "32.39"
+    "key": "g",
+    "timestamp": "32.37"
   },
   {
-    "key": "s",
-    "timestamp": "32.66"
+    "key": "f",
+    "timestamp": "32.64"
   },
   {
     "key": "a",
-    "timestamp": "33.18"
+    "timestamp": "33.21"
   },
   {
     "key": "s",
@@ -285,682 +317,806 @@
   },
   {
     "key": "d",
-    "timestamp": "33.74"
+    "timestamp": "33.72"
   },
   {
     "key": "f",
-    "timestamp": "34.01"
+    "timestamp": "33.99"
   },
   {
     "key": "g",
-    "timestamp": "34.30"
+    "timestamp": "34.29"
   },
   {
     "key": "f",
-    "timestamp": "34.55"
+    "timestamp": "34.58"
   },
   {
     "key": "d",
-    "timestamp": "34.84"
+    "timestamp": "34.82"
   },
   {
     "key": "s",
-    "timestamp": "35.09"
+    "timestamp": "35.07"
   },
   {
     "key": "a",
-    "timestamp": "35.41"
+    "timestamp": "35.34"
+  },
+  {
+    "key": "d",
+    "timestamp": "35.36"
+  },
+  {
+    "key": "s",
+    "timestamp": "35.75"
   },
   {
     "key": "f",
-    "timestamp": "35.43"
+    "timestamp": "35.77"
+  },
+  {
+    "key": "d",
+    "timestamp": "36.20"
   },
   {
     "key": "g",
-    "timestamp": "35.79"
-  },
-  {
-    "key": "s",
-    "timestamp": "35.81"
-  },
-  {
-    "key": "f",
-    "timestamp": "36.22"
-  },
-  {
-    "key": "d",
     "timestamp": "36.22"
   },
   {
     "key": "a",
-    "timestamp": "37.57"
+    "timestamp": "37.65"
   },
   {
-    "key": "s",
-    "timestamp": "37.97"
+    "key": "g",
+    "timestamp": "37.93"
   },
   {
-    "key": "f",
-    "timestamp": "38.33"
+    "key": "d",
+    "timestamp": "38.35"
   },
   {
-    "key": "s",
+    "key": "a",
+    "timestamp": "38.89"
+  },
+  {
+    "key": "d",
     "timestamp": "39.21"
   },
   {
     "key": "a",
-    "timestamp": "39.46"
+    "timestamp": "39.75"
   },
   {
-    "key": "a",
-    "timestamp": "39.73"
-  },
-  {
-    "key": "s",
+    "key": "g",
     "timestamp": "40.18"
   },
   {
-    "key": "f",
-    "timestamp": "40.56"
-  },
-  {
-    "key": "s",
-    "timestamp": "41.14"
-  },
-  {
-    "key": "f",
-    "timestamp": "41.41"
+    "key": "d",
+    "timestamp": "40.63"
   },
   {
     "key": "a",
-    "timestamp": "41.66"
-  },
-  {
-    "key": "s",
-    "timestamp": "41.98"
+    "timestamp": "41.10"
   },
   {
     "key": "d",
-    "timestamp": "42.40"
+    "timestamp": "41.39"
+  },
+  {
+    "key": "s",
+    "timestamp": "41.96"
   },
   {
     "key": "f",
-    "timestamp": "42.76"
-  },
-  {
-    "key": "s",
-    "timestamp": "43.30"
+    "timestamp": "42.36"
   },
   {
     "key": "d",
-    "timestamp": "43.60"
-  },
-  {
-    "key": "g",
-    "timestamp": "43.84"
+    "timestamp": "42.81"
   },
   {
     "key": "s",
-    "timestamp": "44.14"
+    "timestamp": "43.33"
   },
   {
     "key": "d",
-    "timestamp": "44.56"
+    "timestamp": "43.62"
+  },
+  {
+    "key": "s",
+    "timestamp": "44.16"
   },
   {
     "key": "f",
-    "timestamp": "44.92"
-  },
-  {
-    "key": "s",
-    "timestamp": "45.49"
+    "timestamp": "44.54"
   },
   {
     "key": "d",
-    "timestamp": "45.78"
+    "timestamp": "44.97"
   },
   {
-    "key": "g",
-    "timestamp": "46.05"
+    "key": "s",
+    "timestamp": "45.46"
+  },
+  {
+    "key": "d",
+    "timestamp": "45.73"
   },
   {
     "key": "g",
     "timestamp": "46.32"
   },
   {
-    "key": "f",
-    "timestamp": "46.68"
+    "key": "a",
+    "timestamp": "46.75"
   },
   {
     "key": "d",
-    "timestamp": "47.13"
+    "timestamp": "47.20"
+  },
+  {
+    "key": "g",
+    "timestamp": "47.74"
   },
   {
     "key": "d",
-    "timestamp": "47.67"
+    "timestamp": "47.98"
   },
   {
-    "key": "s",
-    "timestamp": "47.94"
+    "key": "g",
+    "timestamp": "48.52"
   },
   {
     "key": "a",
-    "timestamp": "48.21"
-  },
-  {
-    "key": "f",
-    "timestamp": "48.48"
-  },
-  {
-    "key": "d",
     "timestamp": "48.93"
   },
   {
-    "key": "s",
-    "timestamp": "49.31"
+    "key": "d",
+    "timestamp": "49.33"
   },
   {
-    "key": "d",
+    "key": "g",
     "timestamp": "49.85"
   },
   {
-    "key": "s",
-    "timestamp": "50.10"
+    "key": "d",
+    "timestamp": "50.12"
   },
   {
     "key": "a",
-    "timestamp": "50.35"
-  },
-  {
-    "key": "g",
     "timestamp": "50.66"
   },
   {
-    "key": "f",
-    "timestamp": "51.02"
+    "key": "g",
+    "timestamp": "51.07"
   },
   {
     "key": "s",
-    "timestamp": "51.45"
+    "timestamp": "51.49"
+  },
+  {
+    "key": "f",
+    "timestamp": "52.01"
   },
   {
     "key": "d",
-    "timestamp": "51.99"
+    "timestamp": "52.33"
   },
   {
-    "key": "f",
-    "timestamp": "52.26"
-  },
-  {
-    "key": "s",
+    "key": "g",
     "timestamp": "52.82"
   },
   {
-    "key": "d",
-    "timestamp": "53.12"
+    "key": "a",
+    "timestamp": "52.82"
   },
   {
     "key": "f",
-    "timestamp": "53.39"
+    "timestamp": "53.36"
   },
   {
     "key": "s",
-    "timestamp": "53.63"
+    "timestamp": "53.36"
+  },
+  {
+    "key": "d",
+    "timestamp": "53.93"
+  },
+  {
+    "key": "f",
+    "timestamp": "54.22"
+  },
+  {
+    "key": "s",
+    "timestamp": "54.49"
   },
   {
     "key": "g",
-    "timestamp": "53.92"
+    "timestamp": "55.07"
   },
   {
     "key": "a",
-    "timestamp": "54.20"
-  },
-  {
-    "key": "f",
-    "timestamp": "54.47"
-  },
-  {
-    "key": "a",
-    "timestamp": "55.01"
-  },
-  {
-    "key": "s",
-    "timestamp": "55.28"
-  },
-  {
-    "key": "d",
-    "timestamp": "55.59"
-  },
-  {
-    "key": "f",
-    "timestamp": "55.84"
-  },
-  {
-    "key": "a",
-    "timestamp": "56.09"
-  },
-  {
-    "key": "s",
-    "timestamp": "56.38"
-  },
-  {
-    "key": "d",
-    "timestamp": "56.67"
-  },
-  {
-    "key": "f",
-    "timestamp": "56.94"
-  },
-  {
-    "key": "a",
-    "timestamp": "57.21"
-  },
-  {
-    "key": "s",
-    "timestamp": "57.50"
-  },
-  {
-    "key": "d",
-    "timestamp": "57.77"
-  },
-  {
-    "key": "f",
-    "timestamp": "58.04"
-  },
-  {
-    "key": "a",
-    "timestamp": "58.29"
-  },
-  {
-    "key": "s",
-    "timestamp": "58.56"
-  },
-  {
-    "key": "d",
-    "timestamp": "58.85"
-  },
-  {
-    "key": "f",
-    "timestamp": "59.08"
-  },
-  {
-    "key": "s",
-    "timestamp": "59.37"
-  },
-  {
-    "key": "f",
-    "timestamp": "59.53"
-  },
-  {
-    "key": "s",
-    "timestamp": "59.75"
+    "timestamp": "55.07"
   },
   {
     "key": "g",
-    "timestamp": "59.91"
+    "timestamp": "55.33"
   },
   {
-    "key": "s",
-    "timestamp": "60.45"
+    "key": "a",
+    "timestamp": "55.33"
   },
   {
-    "key": "f",
-    "timestamp": "60.59"
-  },
-  {
-    "key": "d",
-    "timestamp": "60.88"
+    "key": "a",
+    "timestamp": "55.60"
   },
   {
     "key": "g",
-    "timestamp": "61.04"
+    "timestamp": "55.62"
+  },
+  {
+    "key": "a",
+    "timestamp": "55.89"
+  },
+  {
+    "key": "g",
+    "timestamp": "55.91"
+  },
+  {
+    "key": "f",
+    "timestamp": "56.18"
+  },
+  {
+    "key": "a",
+    "timestamp": "56.18"
+  },
+  {
+    "key": "a",
+    "timestamp": "56.43"
+  },
+  {
+    "key": "f",
+    "timestamp": "56.43"
+  },
+  {
+    "key": "a",
+    "timestamp": "56.68"
+  },
+  {
+    "key": "f",
+    "timestamp": "56.68"
+  },
+  {
+    "key": "f",
+    "timestamp": "56.95"
+  },
+  {
+    "key": "a",
+    "timestamp": "56.97"
+  },
+  {
+    "key": "d",
+    "timestamp": "57.24"
+  },
+  {
+    "key": "a",
+    "timestamp": "57.29"
+  },
+  {
+    "key": "d",
+    "timestamp": "57.54"
+  },
+  {
+    "key": "a",
+    "timestamp": "57.54"
+  },
+  {
+    "key": "a",
+    "timestamp": "57.80"
+  },
+  {
+    "key": "d",
+    "timestamp": "57.80"
+  },
+  {
+    "key": "d",
+    "timestamp": "58.05"
+  },
+  {
+    "key": "a",
+    "timestamp": "58.07"
+  },
+  {
+    "key": "a",
+    "timestamp": "58.37"
   },
   {
     "key": "s",
+    "timestamp": "58.39"
+  },
+  {
+    "key": "s",
+    "timestamp": "58.66"
+  },
+  {
+    "key": "a",
+    "timestamp": "58.66"
+  },
+  {
+    "key": "s",
+    "timestamp": "58.91"
+  },
+  {
+    "key": "a",
+    "timestamp": "58.91"
+  },
+  {
+    "key": "s",
+    "timestamp": "59.15"
+  },
+  {
+    "key": "a",
+    "timestamp": "59.16"
+  },
+  {
+    "key": "a",
+    "timestamp": "59.40"
+  },
+  {
+    "key": "g",
+    "timestamp": "59.56"
+  },
+  {
+    "key": "a",
+    "timestamp": "59.81"
+  },
+  {
+    "key": "f",
+    "timestamp": "59.96"
+  },
+  {
+    "key": "g",
+    "timestamp": "60.48"
+  },
+  {
+    "key": "a",
+    "timestamp": "60.62"
+  },
+  {
+    "key": "g",
+    "timestamp": "60.86"
+  },
+  {
+    "key": "s",
+    "timestamp": "61.07"
+  },
+  {
+    "key": "a",
     "timestamp": "61.58"
   },
   {
-    "key": "d",
-    "timestamp": "61.71"
-  },
-  {
-    "key": "f",
-    "timestamp": "61.98"
-  },
-  {
     "key": "g",
-    "timestamp": "62.12"
+    "timestamp": "61.74"
   },
   {
-    "key": "s",
+    "key": "a",
+    "timestamp": "61.97"
+  },
+  {
+    "key": "d",
+    "timestamp": "62.10"
+  },
+  {
+    "key": "a",
     "timestamp": "62.66"
   },
   {
-    "key": "f",
+    "key": "g",
     "timestamp": "62.93"
   },
   {
-    "key": "d",
-    "timestamp": "63.22"
-  },
-  {
-    "key": "a",
-    "timestamp": "63.76"
-  },
-  {
     "key": "s",
-    "timestamp": "64.03"
-  },
-  {
-    "key": "a",
-    "timestamp": "64.30"
-  },
-  {
-    "key": "s",
-    "timestamp": "64.59"
-  },
-  {
-    "key": "a",
-    "timestamp": "64.84"
-  },
-  {
-    "key": "s",
-    "timestamp": "65.15"
-  },
-  {
-    "key": "a",
-    "timestamp": "65.40"
-  },
-  {
-    "key": "s",
-    "timestamp": "65.67"
-  },
-  {
-    "key": "a",
-    "timestamp": "65.92"
-  },
-  {
-    "key": "s",
-    "timestamp": "66.19"
-  },
-  {
-    "key": "a",
-    "timestamp": "66.48"
-  },
-  {
-    "key": "s",
-    "timestamp": "66.75"
-  },
-  {
-    "key": "a",
-    "timestamp": "67.00"
-  },
-  {
-    "key": "s",
-    "timestamp": "67.29"
-  },
-  {
-    "key": "d",
-    "timestamp": "67.54"
+    "timestamp": "63.21"
   },
   {
     "key": "f",
-    "timestamp": "67.81"
+    "timestamp": "63.45"
   },
   {
     "key": "g",
-    "timestamp": "68.08"
-  },
-  {
-    "key": "d",
-    "timestamp": "70.32"
+    "timestamp": "63.74"
   },
   {
     "key": "a",
-    "timestamp": "70.32"
-  },
-  {
-    "key": "d",
-    "timestamp": "72.55"
-  },
-  {
-    "key": "f",
-    "timestamp": "72.74"
+    "timestamp": "63.74"
   },
   {
     "key": "g",
-    "timestamp": "73.01"
+    "timestamp": "64.04"
+  },
+  {
+    "key": "a",
+    "timestamp": "64.04"
+  },
+  {
+    "key": "g",
+    "timestamp": "64.31"
+  },
+  {
+    "key": "a",
+    "timestamp": "64.35"
+  },
+  {
+    "key": "g",
+    "timestamp": "64.60"
+  },
+  {
+    "key": "a",
+    "timestamp": "64.60"
+  },
+  {
+    "key": "a",
+    "timestamp": "64.87"
   },
   {
     "key": "f",
-    "timestamp": "73.28"
+    "timestamp": "64.87"
   },
   {
-    "key": "d",
-    "timestamp": "73.43"
+    "key": "a",
+    "timestamp": "65.14"
   },
   {
     "key": "f",
-    "timestamp": "73.70"
+    "timestamp": "65.14"
+  },
+  {
+    "key": "f",
+    "timestamp": "65.41"
+  },
+  {
+    "key": "a",
+    "timestamp": "65.41"
+  },
+  {
+    "key": "a",
+    "timestamp": "65.70"
+  },
+  {
+    "key": "f",
+    "timestamp": "65.70"
   },
   {
     "key": "d",
+    "timestamp": "65.97"
+  },
+  {
+    "key": "a",
+    "timestamp": "65.97"
+  },
+  {
+    "key": "d",
+    "timestamp": "66.22"
+  },
+  {
+    "key": "a",
+    "timestamp": "66.22"
+  },
+  {
+    "key": "a",
+    "timestamp": "66.51"
+  },
+  {
+    "key": "d",
+    "timestamp": "66.51"
+  },
+  {
+    "key": "d",
+    "timestamp": "66.78"
+  },
+  {
+    "key": "a",
+    "timestamp": "66.78"
+  },
+  {
+    "key": "a",
+    "timestamp": "67.07"
+  },
+  {
+    "key": "s",
+    "timestamp": "67.07"
+  },
+  {
+    "key": "a",
+    "timestamp": "67.34"
+  },
+  {
+    "key": "s",
+    "timestamp": "67.37"
+  },
+  {
+    "key": "a",
+    "timestamp": "67.60"
+  },
+  {
+    "key": "s",
+    "timestamp": "67.60"
+  },
+  {
+    "key": "a",
+    "timestamp": "67.86"
+  },
+  {
+    "key": "s",
+    "timestamp": "67.86"
+  },
+  {
+    "key": "s",
+    "timestamp": "68.15"
+  },
+  {
+    "key": "f",
+    "timestamp": "68.18"
+  },
+  {
+    "key": "a",
+    "timestamp": "70.25"
+  },
+  {
+    "key": "d",
+    "timestamp": "70.25"
+  },
+  {
+    "key": "g",
+    "timestamp": "70.25"
+  },
+  {
+    "key": "d",
+    "timestamp": "72.58"
+  },
+  {
+    "key": "f",
+    "timestamp": "72.77"
+  },
+  {
+    "key": "g",
+    "timestamp": "73.04"
+  },
+  {
+    "key": "f",
+    "timestamp": "73.31"
+  },
+  {
+    "key": "g",
+    "timestamp": "73.42"
+  },
+  {
+    "key": "f",
+    "timestamp": "73.69"
+  },
+  {
+    "key": "g",
     "timestamp": "73.82"
   },
   {
     "key": "f",
-    "timestamp": "74.11"
+    "timestamp": "74.07"
   },
   {
     "key": "d",
-    "timestamp": "74.69"
+    "timestamp": "74.66"
   },
   {
     "key": "f",
-    "timestamp": "74.94"
+    "timestamp": "74.93"
   },
   {
     "key": "g",
-    "timestamp": "75.21"
-  },
-  {
-    "key": "d",
-    "timestamp": "75.53"
+    "timestamp": "75.24"
   },
   {
     "key": "f",
-    "timestamp": "75.64"
+    "timestamp": "75.49"
   },
   {
-    "key": "d",
-    "timestamp": "75.93"
+    "key": "g",
+    "timestamp": "75.67"
   },
   {
     "key": "f",
-    "timestamp": "76.07"
+    "timestamp": "75.92"
   },
   {
-    "key": "d",
+    "key": "g",
+    "timestamp": "76.05"
+  },
+  {
+    "key": "f",
     "timestamp": "76.34"
   },
   {
     "key": "s",
-    "timestamp": "76.85"
+    "timestamp": "76.95"
   },
   {
     "key": "d",
-    "timestamp": "77.12"
+    "timestamp": "77.22"
   },
   {
     "key": "f",
-    "timestamp": "77.42"
-  },
-  {
-    "key": "s",
-    "timestamp": "77.69"
+    "timestamp": "77.45"
   },
   {
     "key": "d",
-    "timestamp": "77.87"
-  },
-  {
-    "key": "s",
-    "timestamp": "78.11"
-  },
-  {
-    "key": "d",
-    "timestamp": "78.27"
-  },
-  {
-    "key": "s",
-    "timestamp": "78.52"
-  },
-  {
-    "key": "s",
-    "timestamp": "79.06"
-  },
-  {
-    "key": "d",
-    "timestamp": "79.33"
+    "timestamp": "77.74"
   },
   {
     "key": "f",
-    "timestamp": "79.60"
-  },
-  {
-    "key": "s",
-    "timestamp": "79.87"
+    "timestamp": "77.94"
   },
   {
     "key": "d",
-    "timestamp": "80.00"
-  },
-  {
-    "key": "s",
-    "timestamp": "80.27"
-  },
-  {
-    "key": "d",
-    "timestamp": "80.41"
-  },
-  {
-    "key": "s",
-    "timestamp": "80.68"
-  },
-  {
-    "key": "a",
-    "timestamp": "81.22"
-  },
-  {
-    "key": "s",
-    "timestamp": "81.49"
-  },
-  {
-    "key": "d",
-    "timestamp": "81.76"
-  },
-  {
-    "key": "a",
-    "timestamp": "82.03"
-  },
-  {
-    "key": "s",
-    "timestamp": "82.19"
-  },
-  {
-    "key": "a",
-    "timestamp": "82.43"
-  },
-  {
-    "key": "s",
-    "timestamp": "82.61"
-  },
-  {
-    "key": "a",
-    "timestamp": "82.88"
-  },
-  {
-    "key": "a",
-    "timestamp": "83.40"
-  },
-  {
-    "key": "s",
-    "timestamp": "83.67"
-  },
-  {
-    "key": "d",
-    "timestamp": "83.96"
-  },
-  {
-    "key": "a",
-    "timestamp": "84.21"
-  },
-  {
-    "key": "s",
-    "timestamp": "84.35"
-  },
-  {
-    "key": "a",
-    "timestamp": "84.62"
-  },
-  {
-    "key": "s",
-    "timestamp": "84.77"
-  },
-  {
-    "key": "a",
-    "timestamp": "85.02"
-  },
-  {
-    "key": "s",
-    "timestamp": "85.58"
-  },
-  {
-    "key": "d",
-    "timestamp": "85.83"
+    "timestamp": "78.17"
   },
   {
     "key": "f",
-    "timestamp": "86.12"
-  },
-  {
-    "key": "s",
-    "timestamp": "86.39"
+    "timestamp": "78.32"
   },
   {
     "key": "d",
-    "timestamp": "86.55"
-  },
-  {
-    "key": "f",
-    "timestamp": "86.82"
+    "timestamp": "78.53"
   },
   {
     "key": "s",
-    "timestamp": "86.93"
+    "timestamp": "79.07"
+  },
+  {
+    "key": "d",
+    "timestamp": "79.34"
   },
   {
     "key": "f",
-    "timestamp": "87.23"
+    "timestamp": "79.61"
+  },
+  {
+    "key": "d",
+    "timestamp": "79.90"
+  },
+  {
+    "key": "f",
+    "timestamp": "80.03"
+  },
+  {
+    "key": "d",
+    "timestamp": "80.33"
+  },
+  {
+    "key": "f",
+    "timestamp": "80.44"
+  },
+  {
+    "key": "d",
+    "timestamp": "80.69"
   },
   {
     "key": "a",
-    "timestamp": "87.74"
+    "timestamp": "81.27"
+  },
+  {
+    "key": "s",
+    "timestamp": "81.52"
+  },
+  {
+    "key": "d",
+    "timestamp": "81.79"
+  },
+  {
+    "key": "s",
+    "timestamp": "82.08"
+  },
+  {
+    "key": "d",
+    "timestamp": "82.24"
+  },
+  {
+    "key": "s",
+    "timestamp": "82.51"
+  },
+  {
+    "key": "d",
+    "timestamp": "82.62"
+  },
+  {
+    "key": "s",
+    "timestamp": "82.89"
+  },
+  {
+    "key": "a",
+    "timestamp": "83.43"
+  },
+  {
+    "key": "s",
+    "timestamp": "83.70"
+  },
+  {
+    "key": "d",
+    "timestamp": "83.97"
+  },
+  {
+    "key": "s",
+    "timestamp": "84.26"
+  },
+  {
+    "key": "d",
+    "timestamp": "84.38"
+  },
+  {
+    "key": "s",
+    "timestamp": "84.65"
+  },
+  {
+    "key": "d",
+    "timestamp": "84.76"
+  },
+  {
+    "key": "s",
+    "timestamp": "85.01"
+  },
+  {
+    "key": "a",
+    "timestamp": "85.57"
+  },
+  {
+    "key": "s",
+    "timestamp": "85.86"
+  },
+  {
+    "key": "d",
+    "timestamp": "86.13"
+  },
+  {
+    "key": "f",
+    "timestamp": "86.40"
   },
   {
     "key": "g",
-    "timestamp": "87.74"
+    "timestamp": "86.69"
   },
   {
     "key": "f",
-    "timestamp": "88.13"
-  },
-  {
-    "key": "s",
-    "timestamp": "88.13"
+    "timestamp": "86.92"
   },
   {
     "key": "d",
-    "timestamp": "88.58"
+    "timestamp": "87.23"
+  },
+  {
+    "key": "s",
+    "timestamp": "87.48"
+  },
+  {
+    "key": "a",
+    "timestamp": "87.75"
+  },
+  {
+    "key": "d",
+    "timestamp": "87.75"
+  },
+  {
+    "key": "s",
+    "timestamp": "88.18"
+  },
+  {
+    "key": "f",
+    "timestamp": "88.18"
+  },
+  {
+    "key": "d",
+    "timestamp": "88.56"
+  },
+  {
+    "key": "g",
+    "timestamp": "88.56"
   }
 ]

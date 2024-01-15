@@ -24,7 +24,7 @@ const AwardsItem = ({ music }) => {
   }
 
   return (
-    <li className='awards-item' onClick={toggleHovered}>
+    <li className='awards-item' onMouseEnter={toggleHovered} onMouseLeave={toggleHovered}>
       <p className='awards-music-name'>
         {music.name}, <span>{music.artist}</span>
       </p>
