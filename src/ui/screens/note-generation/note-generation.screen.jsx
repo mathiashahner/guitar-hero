@@ -10,9 +10,10 @@ let notes = []
 
 export const NoteGenerationScreen = () => {
   const downloadRef = useRef(null)
-  const [audio, togglePlay, played] = useAudio('/Amanhecer no teu olhar.mp3')
+  const [audio, togglePlay, played] = useAudio('/Lembranças.mp3')
 
   useEffect(() => {
+    // audio.currentTime = 0
     window.addEventListener('keydown', handleKeyDown)
 
     return () => {

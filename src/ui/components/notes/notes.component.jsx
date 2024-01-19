@@ -24,6 +24,7 @@ export const Notes = () => {
 
       setGlobalGame({ ...globalGame, totalNotes: mappedNotes.length })
       setNotes(mappedNotes)
+      // audio.currentTime = 0
       togglePlay()
     })
   }, [])
