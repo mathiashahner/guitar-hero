@@ -50,7 +50,11 @@ export const Awards = () => {
       <h1 className='modal-title'>PREMIAÇÃO</h1>
 
       <div className='modal-body'>
-        <p>Aqui estão algumas dicas para você encontrar seu presente:</p>
+        <p>Abaixo estão algumas dicas para você encontrar seu presente.</p>
+
+        <p>
+          &emsp;&emsp;Você precisa de uma pontuação superior à 75% para que a dica seja revelada por completo:
+        </p>
 
         <ul className='awards-list'>
           {globalUser.map((music, index) => (

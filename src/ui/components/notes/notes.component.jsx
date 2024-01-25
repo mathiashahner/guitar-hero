@@ -15,10 +15,10 @@ export const Notes = () => {
     import(`../../../assets/${globalGame.selectedMusic.name}.json`).then(jsonData => {
       const mappedNotes = jsonData.default.map(note => {
         return {
-          ...note,
           played: false,
+          index: Number(note.key),
+          key: LINE_NOTES[note.key].key,
           timestamp: Number(note.timestamp),
-          index: LINE_NOTES.findIndex(line => line.key === note.key),
         }
       })
 
